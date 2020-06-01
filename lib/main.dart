@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:quiz_app/views/quiz.dart';
 
 void main() => runApp(MyApp());
 
@@ -55,7 +56,9 @@ class HomePage extends StatelessWidget {
                   ),
                   color: Color(0xFFFFBA00),
                   textColor: Colors.white,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => QuizPage()));
+                  },
                 ),
               )
             ],
