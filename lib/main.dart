@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: "productsans",
       ),
@@ -44,10 +45,7 @@ class HomePage extends StatelessWidget {
               ),
               Container(
                 width: MediaQuery.of(context).size.width,
-                margin: EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 40
-                ),
+                margin: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
                 child: RaisedButton(
                   padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   child: Text(
@@ -57,7 +55,8 @@ class HomePage extends StatelessWidget {
                   color: Color(0xFFFFBA00),
                   textColor: Colors.white,
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => QuizPage()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => QuizPage()));
                   },
                 ),
               )
